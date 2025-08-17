@@ -10,13 +10,12 @@
       font-family: 'Montserrat', sans-serif;
       margin: 0;
       padding: 0;
-      background: #f5f2ec url('https://images.unsplash.com/photo-1555992336-03a23c7b20ce') no-repeat center fixed;
-      background-size: cover;
+      background: #fdf5e6;
       color: #333;
     }
     header {
-      background: rgba(0,0,0,0.7);
-      height: 70vh;
+      background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092') no-repeat center center/cover;
+      height: 85vh;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -29,13 +28,14 @@
       background: rgba(178,34,34,0.85);
       padding: 25px 40px;
       border-radius: 15px;
+      z-index: 1;
       box-shadow: 0 6px 20px rgba(0,0,0,0.4);
     }
     section {
       max-width: 1000px;
       margin: 60px auto;
       padding: 40px;
-      background: rgba(255,255,255,0.96);
+      background: #fff;
       border-radius: 15px;
       box-shadow: 0 6px 20px rgba(0,0,0,0.2);
     }
@@ -50,20 +50,30 @@
       line-height: 1.8rem;
       text-align: center;
     }
+    ul {
+      list-style: none;
+      padding: 0;
+      font-size: 1.2rem;
+      line-height: 1.8rem;
+    }
+    ul li::before {
+      content: "✅ ";
+      color: #b22222;
+    }
     .price {
       text-align: center;
-      margin: 40px 0;
+      margin: 50px 0;
     }
     .price h2 {
-      font-size: 2.5rem;
+      font-size: 2.4rem;
       color: #b22222;
     }
     .price p {
-      font-size: 1.3rem;
+      font-size: 1.4rem;
     }
     .cta {
       text-align: center;
-      margin-top: 40px;
+      margin: 40px 0;
     }
     .cta a {
       display: inline-block;
@@ -72,7 +82,6 @@
       padding: 20px 50px;
       font-size: 1.5rem;
       border-radius: 50px;
-      cursor: pointer;
       text-decoration: none;
       transition: transform 0.3s, box-shadow 0.3s;
       box-shadow: 0 6px 15px rgba(0,0,0,0.3);
@@ -80,6 +89,19 @@
     .cta a:hover {
       transform: scale(1.08);
       box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
+    .urgency {
+      color: #ff4500;
+      font-weight: bold;
+      font-size: 1.3rem;
+      margin-top: 15px;
+      animation: pulse 1.2s infinite;
+      text-align: center;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.1); opacity: 0.6; }
+      100% { transform: scale(1); opacity: 1; }
     }
     footer {
       background: #1e1e1e;
@@ -93,28 +115,40 @@
 </head>
 <body>
   <header>
-    <h1>🔥 Oferta Especial de Churrasco Premium 🔥</h1>
+    <h1>🎉 Oferta Especial Para Você!</h1>
   </header>
 
   <section>
-    <h2>🍖 Surpreenda-se com esta Oferta Exclusiva!</h2>
-    <p>Você já garantiu seu <strong>Ebook Completo de Churrasco</strong>, mas antes de sair temos uma oportunidade única para você:</p>
-    <p><strong>O Guia Premium de Churrasco + 15 Receitas Secretas</strong><br>
-       Receitas exclusivas, marinadas especiais e técnicas avançadas de churrasqueiros profissionais.</p>
+    <h2>🔥 Torne-se um Mestre do Churrasco Premium</h2>
+    <p>Você já garantiu o <strong>Ebook Completo de Churrasco</strong>, mas agora tem a chance de ir além!  
+    Preparamos um <strong>Pacote Exclusivo Premium</strong> que vai transformar seus churrascos em verdadeiras experiências inesquecíveis.</p>
   </section>
 
-  <section class="price">
-    <h2>De <s>R$49,90</s> por apenas <span style="color:#ff4500;">R$19,90</span></h2>
-    <p>⚡ Só disponível nesta página. Não perca!</p>
+  <section>
+    <h2>📦 O que você vai receber</h2>
+    <ul>
+      <li>Livro digital com receitas avançadas de churrasco</li>
+      <li>Segredos de cortes nobres revelados</li>
+      <li>Guia de harmonização com cervejas e vinhos</li>
+      <li>Checklist prático para organizar churrascos</li>
+      <li>Bônus: Receitas de sobremesas na brasa 🍫🔥</li>
+    </ul>
   </section>
 
-  <div class="cta">
-    <a href="https://pay.kirvano.com/SEU-LINK-DE-UPSELL" target="_blank">🔥 QUERO A OFERTA ESPECIAL</a>
-    <p style="margin-top:12px; font-size:1rem; color:#444;">Acesso imediato após a compra</p>
+  <div class="price">
+    <h2>De R$49,90 por apenas <span style="font-size:2.5rem;">R$24,90</span></h2>
+    <p>⚡ Oferta única, válida somente agora nesta página!</p>
   </div>
 
+  <div class="cta">
+    <a href="https://pay.kirvano.com/91e00a04-1691-441c-b80f-763319049422" target="_blank">🔥 QUERO MEU PACOTE ESPECIAL</a>
+    <p style="margin-top:12px; font-size:1rem; color:#444;">Aproveite essa oportunidade única – depois não terá mais acesso.</p>
+  </div>
+
+  <p class="urgency">⏰ Última chance: essa oferta só aparece uma vez!</p>
+
   <footer>
-    <p>© 2025 Oferta Especial de Churrasco. Todos os direitos reservados.</p>
+    <p>© 2025 Churrasco Premium. Todos os direitos reservados.</p>
   </footer>
 </body>
 </html>
